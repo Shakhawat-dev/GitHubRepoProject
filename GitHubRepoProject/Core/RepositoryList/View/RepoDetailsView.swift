@@ -13,13 +13,50 @@ struct RepoDetailsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("\(repo?.fullName ?? "")")
-                    .font(.title)
+                VStack {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("\(repo?.name ?? "")")
+                                .font(.headline)
+                                .bold()
+                            
+                            HStack {
+                                Text("\(repo?.forksCount ?? 0) Forks")
+                                
+                                Text("\(repo?.openIssuesCount ?? 0) Open Issues")
+
+                                Label {
+                                    Text("\(repo?.stargazersCount ?? 0)")
+                                } icon: {
+                                    Image(systemName: "star.circle")
+                                }
+                            }
+                            .font(.caption)
+                            .bold()
+                        }
+                        
+                        Spacer()
+                        
+                        VStack {
+                            ImageLoaderView(url: repo?.owner?.avatarURL ?? "")
+                                .frame(width: 64, height: 64)
+                                .clipShape(Circle())
+                            
+                            Text("\(repo?.owner?.gravatarID ?? "")")
+                        }
+                    }
+                    
+
+                }
+                
+//                HtmlTextView(htmlText: repo?.description ?? "", width: UIScreen.main.bounds.width - 64)
                 
                 Text("\(repo?.description ?? "")")
-                    .font(.body)
+                    .font(.caption)
+                
             }
             .padding()
+            .navigationTitle(Text(repo?.name ?? ""))
         }
         
     }

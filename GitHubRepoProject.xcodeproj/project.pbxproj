@@ -14,6 +14,10 @@
 		1154142E2A398D9800B3F77E /* GitHubRepoProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1154142D2A398D9800B3F77E /* GitHubRepoProjectTests.swift */; };
 		115414382A398D9800B3F77E /* GitHubRepoProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115414372A398D9800B3F77E /* GitHubRepoProjectUITests.swift */; };
 		1154143A2A398D9800B3F77E /* GitHubRepoProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115414392A398D9800B3F77E /* GitHubRepoProjectUITestsLaunchTests.swift */; };
+		11571DE42A3B3CC6002B226D /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11571DE32A3B3CC6002B226D /* ImageLoaderService.swift */; };
+		11571DE82A3B3D3B002B226D /* ImageLoaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11571DE72A3B3D3B002B226D /* ImageLoaderViewModel.swift */; };
+		11571DEB2A3B3D6A002B226D /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11571DEA2A3B3D6A002B226D /* ImageLoaderView.swift */; };
+		11571DED2A3B42DF002B226D /* HtmlTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11571DEC2A3B42DF002B226D /* HtmlTextView.swift */; };
 		11A408672A3B132A003325DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A408662A3B132A003325DD /* NetworkManager.swift */; };
 		11A408692A3B13B8003325DD /* ServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A408682A3B13B8003325DD /* ServiceBase.swift */; };
 		11A4086B2A3B1405003325DD /* AllBusinessApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4086A2A3B1405003325DD /* AllBusinessApi.swift */; };
@@ -56,6 +60,10 @@
 		115414332A398D9800B3F77E /* GitHubRepoProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubRepoProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		115414372A398D9800B3F77E /* GitHubRepoProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepoProjectUITests.swift; sourceTree = "<group>"; };
 		115414392A398D9800B3F77E /* GitHubRepoProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepoProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		11571DE32A3B3CC6002B226D /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
+		11571DE72A3B3D3B002B226D /* ImageLoaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderViewModel.swift; sourceTree = "<group>"; };
+		11571DEA2A3B3D6A002B226D /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		11571DEC2A3B42DF002B226D /* HtmlTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlTextView.swift; sourceTree = "<group>"; };
 		11A408662A3B132A003325DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		11A408682A3B13B8003325DD /* ServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBase.swift; sourceTree = "<group>"; };
 		11A4086A2A3B1405003325DD /* AllBusinessApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBusinessApi.swift; sourceTree = "<group>"; };
@@ -183,9 +191,43 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		11571DE22A3B3CA3002B226D /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				11571DE32A3B3CC6002B226D /* ImageLoaderService.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		11571DE52A3B3D1F002B226D /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				11571DE92A3B3D52002B226D /* View */,
+				11571DE62A3B3D28002B226D /* ViewModel */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		11571DE62A3B3D28002B226D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11571DE72A3B3D3B002B226D /* ImageLoaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11571DE92A3B3D52002B226D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11571DEA2A3B3D6A002B226D /* ImageLoaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		11A4086C2A3B1449003325DD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				11571DE22A3B3CA3002B226D /* ImageLoader */,
 				11A4087C2A3B1A58003325DD /* GitRepoService.swift */,
 			);
 			path = Services;
@@ -238,7 +280,9 @@
 		11A408802A3B2BA1003325DD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				11571DE52A3B3D1F002B226D /* ImageLoader */,
 				11A408812A3B2BD8003325DD /* NoDataView.swift */,
+				11571DEC2A3B42DF002B226D /* HtmlTextView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -382,10 +426,14 @@
 				11A4087F2A3B2024003325DD /* GitRowView.swift in Sources */,
 				11A408822A3B2BD8003325DD /* NoDataView.swift in Sources */,
 				11A408672A3B132A003325DD /* NetworkManager.swift in Sources */,
+				11571DE42A3B3CC6002B226D /* ImageLoaderService.swift in Sources */,
 				11A408842A3B375D003325DD /* RepoDetailsView.swift in Sources */,
+				11571DE82A3B3D3B002B226D /* ImageLoaderViewModel.swift in Sources */,
+				11571DED2A3B42DF002B226D /* HtmlTextView.swift in Sources */,
 				11A4086F2A3B149A003325DD /* UrlExtension.swift in Sources */,
 				11A408792A3B1733003325DD /* BaseModel.swift in Sources */,
 				1154141A2A398D9600B3F77E /* ContentView.swift in Sources */,
+				11571DEB2A3B3D6A002B226D /* ImageLoaderView.swift in Sources */,
 				115414182A398D9600B3F77E /* GitHubRepoProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

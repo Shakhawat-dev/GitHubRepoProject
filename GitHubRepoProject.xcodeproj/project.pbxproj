@@ -23,8 +23,9 @@
 		11A408792A3B1733003325DD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A408782A3B1733003325DD /* BaseModel.swift */; };
 		11A4087B2A3B1869003325DD /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4087A2A3B1869003325DD /* RepositoryModel.swift */; };
 		11A4087D2A3B1A58003325DD /* GitRepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4087C2A3B1A58003325DD /* GitRepoService.swift */; };
-		11A4087F2A3B2024003325DD /* GItRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4087E2A3B2024003325DD /* GItRowView.swift */; };
+		11A4087F2A3B2024003325DD /* GitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A4087E2A3B2024003325DD /* GitRowView.swift */; };
 		11A408822A3B2BD8003325DD /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A408812A3B2BD8003325DD /* NoDataView.swift */; };
+		11A408842A3B375D003325DD /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A408832A3B375D003325DD /* RepoDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +65,9 @@
 		11A408782A3B1733003325DD /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		11A4087A2A3B1869003325DD /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		11A4087C2A3B1A58003325DD /* GitRepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoService.swift; sourceTree = "<group>"; };
-		11A4087E2A3B2024003325DD /* GItRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GItRowView.swift; sourceTree = "<group>"; };
+		11A4087E2A3B2024003325DD /* GitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRowView.swift; sourceTree = "<group>"; };
 		11A408812A3B2BD8003325DD /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		11A408832A3B375D003325DD /* RepoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				11A408802A3B2BA1003325DD /* Components */,
-				11A408702A3B14FB003325DD /* Home */,
+				11A408702A3B14FB003325DD /* RepositoryList */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -197,20 +199,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		11A408702A3B14FB003325DD /* Home */ = {
+		11A408702A3B14FB003325DD /* RepositoryList */ = {
 			isa = PBXGroup;
 			children = (
 				11A408722A3B150B003325DD /* ViewModel */,
 				11A408712A3B1501003325DD /* View */,
 			);
-			path = Home;
+			path = RepositoryList;
 			sourceTree = "<group>";
 		};
 		11A408712A3B1501003325DD /* View */ = {
 			isa = PBXGroup;
 			children = (
 				11A408732A3B1521003325DD /* HomeView.swift */,
-				11A4087E2A3B2024003325DD /* GItRowView.swift */,
+				11A4087E2A3B2024003325DD /* GitRowView.swift */,
+				11A408832A3B375D003325DD /* RepoDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,9 +379,10 @@
 				11A408742A3B1521003325DD /* HomeView.swift in Sources */,
 				11A4087D2A3B1A58003325DD /* GitRepoService.swift in Sources */,
 				11A408762A3B154A003325DD /* HomeViewModel.swift in Sources */,
-				11A4087F2A3B2024003325DD /* GItRowView.swift in Sources */,
+				11A4087F2A3B2024003325DD /* GitRowView.swift in Sources */,
 				11A408822A3B2BD8003325DD /* NoDataView.swift in Sources */,
 				11A408672A3B132A003325DD /* NetworkManager.swift in Sources */,
+				11A408842A3B375D003325DD /* RepoDetailsView.swift in Sources */,
 				11A4086F2A3B149A003325DD /* UrlExtension.swift in Sources */,
 				11A408792A3B1733003325DD /* BaseModel.swift in Sources */,
 				1154141A2A398D9600B3F77E /* ContentView.swift in Sources */,

@@ -16,7 +16,7 @@ struct HomeView: View {
 //                if let movies = vm.movieList {
                     VStack {
                         List(vm.gitList, id: \.id) { repo in
-                            GItRowView(repo: repo)
+                            GitRowView(repo: repo)
                                 .id(repo.id)
                                 .onAppear() {
                                     DispatchQueue.global().sync {

@@ -7,16 +7,22 @@
 
 import SwiftUI
 
-struct GItRowView: View {
+struct GitRowView: View {
     var repo: RepositoryModel?
     
     var body: some View {
-        Text("\(repo?.name ?? "")")
+        NavigationLink {
+            RepoDetailsView(repo: repo)
+        } label: {
+            Text("\(repo?.name ?? "")")
+        }
+
+        
     }
 }
 
-struct GItRowView_Previews: PreviewProvider {
+struct GitRowView_Previews: PreviewProvider {
     static var previews: some View {
-        GItRowView()
+        GitRowView()
     }
 }

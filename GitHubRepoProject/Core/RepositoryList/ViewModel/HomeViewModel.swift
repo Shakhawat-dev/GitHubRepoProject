@@ -21,7 +21,6 @@ class HomeViewModel: ObservableObject {
     @Published var page: Int = 1
     @Published var showLoader: Bool = false
     
-//    @Published var scrollViewOffset: CGFloat = 0
     @Published var showTop: Bool = false
     
     init() {
@@ -34,7 +33,6 @@ class HomeViewModel: ObservableObject {
                 self?.gitSearchResponse = response
                 self?.gitList.append(contentsOf: self?.gitSearchResponse?.items ?? [])
                 self?.showLoader = false
-//                print(self?.gitList)
             }
             .store(in: &cancellables)
         
@@ -46,28 +44,10 @@ class HomeViewModel: ObservableObject {
                 }
                 self?.gitList.removeAll()
                 self?.page = 1
-//                self?.gitRepoService.gitListData(query: text, page: self?.page ?? 1)
                 self?.gitRepoService.loadData(query: text)
             }
             .store(in: &cancellables)
-        
-//        $page
-//            .sink { [weak self] (page) in
-//                self?.gitRepoService.getMovies(query: self?.searchText ?? "", page: page)
-//                self?.showLoader = true
-//            }
-//            .store(in: &cancellables)
 
     }
     
-    
-    /// This method will check the page number is smaller or equal
-    /// to the response page number and will increase the page number if smaller
-//    func goNext() {
-//        guard let listPage = gitSearchResponse?.page else { return }
-//        
-//        if self.page <= listPage {
-//            page += 1
-//        }
-//    }
 }

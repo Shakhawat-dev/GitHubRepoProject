@@ -13,7 +13,6 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             ScrollViewReader { proxy in
-//                if let movies = vm.movieList {
                     VStack {
                         List(vm.gitList, id: \.id) { repo in
                             GitRowView(repo: repo)
@@ -22,7 +21,6 @@ struct HomeView: View {
                                     DispatchQueue.global().sync {
                                         // For infinite scroll
                                         if repo.id == vm.gitList.last?.id {
-//                                            vm.goNext()
                                             
                                             withAnimation {
                                                 vm.showTop = true
@@ -60,9 +58,6 @@ struct HomeView: View {
                             ProgressView()
                         }
                     }
-//                } else {
-//                    NoDataView()
-//                }
             }
             
             
